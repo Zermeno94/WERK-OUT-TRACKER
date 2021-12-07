@@ -3,9 +3,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+//pulled morgan snippets from activity 09
+const logger = require("morgan");
+
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -18,7 +23,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { // 
 });
 
 // routes
-app.use(require("./routes/api.js"));
+app.use(require("./routes/apiRoutes"));
+app.use(require("./routes/htmlRoutes"))
 // app.use(require("./routes/")) need to link up to html?
 
 app.listen(PORT, () => {
