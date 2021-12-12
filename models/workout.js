@@ -1,5 +1,5 @@
 //depencies 
-const mongoose =require("mongoose");
+const mongoose = require ("mongoose");
 const Schema = mongoose.Schema;
 
 //Starter code from mini project and rename to 'workout'
@@ -43,7 +43,7 @@ const WorkoutSchema = new Schema({
   }
   });
   
-  const workout = mongoose.model("Workout", WorkoutSchema);
+  const Workout = mongoose.model("Workout", WorkoutSchema);
   
   module.exports = Workout;
 
