@@ -3,7 +3,7 @@ const mongoose =require("mongoose");
 const Schema = mongoose.Schema;
 
 //Starter code from mini project and rename to 'workout'
-const workoutSchema = new Schema({
+const WorkoutSchema = new Schema({
   day: {
     type: Date,
     default: Date.now
@@ -43,9 +43,9 @@ const workoutSchema = new Schema({
   }
   });
   
-  const workout = mongoose.model("Workout", workoutSchema);
+  const workout = mongoose.model("Workout", WorkoutSchema);
   
-  module.exports = workout;
+  module.exports = Workout;
 
   //TODO
 // Need to adjust the schem to reflect day,excercises (name,sets,etc)
