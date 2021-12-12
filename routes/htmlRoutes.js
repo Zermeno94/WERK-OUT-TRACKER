@@ -1,10 +1,10 @@
 const path = require("path");
-const router = requ8ire("express").Router();
+const router = require("express").Router();
 
 //Pulled code from past activities 
-router.get("/", (req,res)=> {
-    res.sendFile(path.join(__dirname, "index.html"))
-})
+// router.get("/", (req,res)=> {
+//     res.sendFile(path.join(__dirname, "index.html"))
+// })
 
 router.get("/excercise", (req,res)=> {
     res.sendFile(path.join(__dirname, "../public/excercise.html"));
