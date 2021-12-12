@@ -53,3 +53,4 @@ const workoutSchema = new Schema({
 
 // day: { type,default}
 // excercise:{name,weight, sets,distance}
+
