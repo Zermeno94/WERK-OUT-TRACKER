@@ -21,7 +21,7 @@ This application allows users to keep track of their workouts. The application w
   npm install 
 ``` 
 ```bash
-  node server.js
+  npm start
 ```
 
 
