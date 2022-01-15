@@ -2,8 +2,7 @@ const path = require("path");
 const router = require("express").Router();
 
 
-require("./models");
-
+require("../models");
 router.get("/exercise", (req,res)=> {
     res.sendFile(path.join(__dirname, ".../public/exercise.html"));
 });
