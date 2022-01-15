@@ -1,26 +1,40 @@
 const Workout= require("../models/workout");
 const router =require("express").Router();
-const mongoose = require("mongoose");
-
 
 router.get("/api/workouts", (req, res) => {
-  Workout.find({})
-  .then(dbworkout => {
-    res.json(dbworkout);
-  })
-  .catch(err => {
-    res.status(400).json(err);
-  });
+  Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration:
+          { $sum: '$exercises.duration' },
+      }
+    }
+  ])
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
 });
 
-router.get("/api/workouts/range", ({}, res) => {
-  Workout.find({})
-  .then((dbworkout) => {
-    res.json(dbworkout);
-  })
-  .catch(err => {
-    res.status(400).json(err);
-  });
+router.get("/api/workouts/range", (req, res) => {
+  Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration: { $sum: "$exercises.duration" },
+        totalWeight: { $sum: "$exercises.weight" },
+      },
+    },
+  ])
+    .limit(7)
+    .sort({ date: -1 })
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.post("/api/workouts", ({ body }, res) => {
@@ -33,11 +47,14 @@ router.post("/api/workouts", ({ body }, res) => {
   });
 });
 
-router.put("/api/workouts/:id", (req, res) => {
+router.put("/api/workouts/:id", ({ body, params }, res) => {
   Workout.findByIdAndUpdate(
-      {_id: req.params.id}, {exercise: req.body})
-  .then(dbworkout => {
-    res.json(dbworkout);
+    { _id: params.id },
+    { $push: { exercises: body } },
+    { new: true }
+  )
+  .then(dbWorkout => {
+    res.json(dbWorkout);
   })
   .catch(err => {
     res.status(400).json(err);
