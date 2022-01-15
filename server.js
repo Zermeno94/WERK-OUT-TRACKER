@@ -2,8 +2,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-
-
+require("./models");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -20,9 +19,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useFindAndModify: false
 });
 
-require("./models");
-// app.use(require("./models/workout"));
-// app.use(require("./models/index"));
 // routes
 app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
