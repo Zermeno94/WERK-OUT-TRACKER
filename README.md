@@ -43,6 +43,9 @@ This application allows users to keep track of their workouts. The application w
 
 * [https://www.youtube.com/watch?v=Jv2uxzhPFl4](#https://www.youtube.com/watch?v=Jv2uxzhPFl4)
 * [https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md](#https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+* [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/)
+* [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/)
+* [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate)
 
 
 ## MIT License 📍
