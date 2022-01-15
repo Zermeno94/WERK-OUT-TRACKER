@@ -53,10 +53,5 @@ const WorkoutSchema = new Schema({
   
   module.exports = Workout;
 
-  //TODO
-// Need to adjust the schem to reflect day,excercises (name,sets,etc)
-// Reference seed.js to pull what you need
 
-// day: { type,default}
-// excercise:{name,weight, sets,distance}
 
