@@ -43,10 +43,9 @@ router.put("/api/workouts/:id", (req, res) => {
   });
 });
 
-
-
-
 module.exports = router;
+
+
 //TODO
 // Need to pull data for the workout display page
 // Need to POST completed workouts 
