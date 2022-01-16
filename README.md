@@ -32,7 +32,7 @@ This application allows users to keep track of their workouts. The application w
 ### GitHub & Heroku Link
 
 * [GitHub Link](https://github.com/Zermeno94/WERK-OUT-TRACKER)
-* [Heroku Link]()
+* [Heroku Link](https://git.heroku.com/werkk-out-tracker.git)
 
 ## Contributers
 * Miranda Zermeno
