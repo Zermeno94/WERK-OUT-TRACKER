@@ -27,7 +27,7 @@ This application allows users to keep track of their workouts. The application w
 
 ### Demo 🎥
 
-* [Link to Demo]()
+* [Link to Demo](https://watch.screencastify.com/v/l3FzGyHLSDU1NTnqQFdJ)
 
 ### GitHub & Heroku Link
 
