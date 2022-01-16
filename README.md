@@ -27,8 +27,7 @@ This application allows users to keep track of their workouts. The application w
 
 ### Demo 🎥
 
-* [Link to Demo](https://watch.screenca![Werk-Out-Tracker Gif](https://user-images.githubusercontent.com/87839888/149643091-3535fb7a-c94d-4e06-9ab0-b5a74fceeea6.gif)
-stify.com/v/l3FzGyHLSDU1NTnqQFdJ)
+![Werk-Out-Tracker Gif](https://user-images.githubusercontent.com/87839888/149643143-d6728144-8998-40d7-8506-334e654df270.gif)
 
 ### GitHub & Heroku Link
 
